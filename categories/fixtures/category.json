@@ -1,0 +1,18 @@
+[
+  {
+    "model": "categories.Category",
+    "pk": 1,
+    "fields": {
+      "name": "Laptop",
+      "description": "This is Laptop category"
+    }
+  },
+  {
+    "model": "categories.Category",
+    "pk": 2,
+    "fields": {
+      "name": "Smartphones",
+      "description": "This is Smartphones category"
+    }
+  }
+]
