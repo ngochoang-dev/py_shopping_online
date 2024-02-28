@@ -1,7 +1,7 @@
-from rest_framework.serializers import Serializer
+from rest_framework.serializers import ModelSerializer
 from .models import User
 
-class UserSerializer(Serializer):
+class UserSerializer(ModelSerializer):
     class Meta:
         model = User
         fields = ["user_id", "username", "email", "phone"]

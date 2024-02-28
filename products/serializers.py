@@ -1,7 +1,7 @@
-from rest_framework.serializers import Serializer
+from rest_framework.serializers import ModelSerializer, StringRelatedField
 from .models import Product
-
-class ProductSerializer(Serializer):
+from categories.serializers import CategorySerializer
+class ProductSerializer(ModelSerializer):
     class Meta:
         model = Product
-        fields = ["product_id","name","description","price","quantity"]
+        fields = ['product_id' ,'name' ,'description' ,'price' ,'quantity',]
