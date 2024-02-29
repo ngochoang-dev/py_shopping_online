@@ -20,5 +20,5 @@ class Order(models.Model):
     status = models.CharField(max_length=255, choices=STATUSES)
 
     def __str__(self) -> str:
-        return super().__str__()
+        return f'{self.order_id}'
     

@@ -10,4 +10,4 @@ class Category(models.Model):
     description = models.CharField(max_length=255)
 
     def __str__(self) -> str:
-        return super().__str__()
+        return f'{self.name}'

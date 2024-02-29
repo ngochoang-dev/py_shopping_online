@@ -11,7 +11,7 @@ class Product(models.Model):
     description = models.TextField(blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=0) 
     quantity = models.IntegerField(null=False)
-    category_id = models.ForeignKey(Category, related_name='category', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, related_name='category', on_delete=models.CASCADE)
 
     def __str__(self) -> str:
-        return super().__str__()
+        return f'{self.name}'

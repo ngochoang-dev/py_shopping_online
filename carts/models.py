@@ -14,4 +14,4 @@ class Cart(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:
-        return super().__str__()
+        return f'{self.cart_id}'

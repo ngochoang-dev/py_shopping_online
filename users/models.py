@@ -12,4 +12,4 @@ class User(models.Model):
     phone = models.CharField(max_length=11, unique=True)
 
     def __str__(self) -> str:
-        return super().__str__()
+        return f'{self.username}'
