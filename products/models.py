@@ -1,11 +1,8 @@
 from django.db import models
 from categories.models import Category
 
-# Create your models here.
-class Product(models.Model):
-    class Meta:
-        db_table = 'products'
 
+class Product(models.Model):
     product_id = models.BigAutoField(primary_key=True)
     name = models.CharField(max_length=255, null=False)
     description = models.TextField(blank=True)

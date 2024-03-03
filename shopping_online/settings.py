@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'orders',
     'order_items',
     'categories',
+    'coupons',
 
     # Libraries
     'rest_framework',
@@ -137,8 +138,11 @@ REST_FRAMEWORK = {
     )
 }
 
+AUTH_USER_MODEL = 'users.User'
+
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
-    'TOKEN_OBTAIN_SERIALIZER': 'users.serializers.UserSignInSerializer'
+    "AUTH_HEADER_TYPES": ("Bearer",),
+    "USER_ID_FIELD": "user_id"
 }
