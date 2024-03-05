@@ -6,7 +6,7 @@ from products.models import Product
 class Cart(models.Model):
     cart_id = models.BigAutoField(primary_key=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.IntegerField()
     date_added = models.DateTimeField(auto_now_add=True)
 

@@ -8,7 +8,10 @@ class User(AbstractUser):
     user_id = models.BigAutoField(primary_key=True)
     phone = models.CharField(max_length=11, blank=True)
     avatar = models.CharField(max_length=255, blank=True)
-    email = models.EmailField(_("email address"), blank=True, unique=True)
+    email = models.EmailField(_("email address"), blank=False, null=False, unique=True)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
+
+    def __str__(self) -> str:
+        return f'{self.first_name} {self.last_name}'
